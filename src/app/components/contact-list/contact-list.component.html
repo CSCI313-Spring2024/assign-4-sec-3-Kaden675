@@ -1,0 +1,8 @@
+<h2>Contact List</h2>
+<a routerLink="/add" class="btn btn-success mb-3">Add New Contact</a>
+
+<div class="row">
+  <div class="col-md-6 mb-3" *ngFor="let contact of contacts()">
+    <app-contact-card [contact]="contact" (delete)="deleteContact($event)"></app-contact-card>
+  </div>
+</div>

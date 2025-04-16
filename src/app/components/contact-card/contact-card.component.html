@@ -1,0 +1,9 @@
+<div class="card shadow p-3">
+  <div class="card-body">
+    <h5 class="card-title">{{ contact.fName }} {{ contact.lName }}</h5>
+    <p class="card-text">Phone: {{ contact.phoneNumber }}</p>
+    <p class="card-text">Email: {{ contact.email }}</p>
+    <a [routerLink]="['/edit', contact.id]" class="btn btn-primary">Edit</a>
+    <button (click)="delete.emit(contact.id)" class="btn btn-danger ms-2">Delete</button>
+  </div>
+</div>
